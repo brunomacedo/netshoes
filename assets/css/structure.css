@@ -1,0 +1,32 @@
+a, article, aside, audio, b, blockquote, body, br, button, canvas, cite, code, dd, del, details, div, dl, dt, em, embed, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, input, label, legend, li, main, mark, menu, nav, object, ol, option, p, pre, q, section, select, small, source, span, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, title, tr, u, ul, var, video {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.4;
+    text-decoration: none;
+    background: transparent;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+hgroup, h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+b, strong {
+    font-weight: 700;
+}
