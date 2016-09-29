@@ -36,24 +36,13 @@
       <div class="ng-overflow-nt" ng-controller="MyController">
         <section class="main-guide">
 
-          <md-sidenav class="md-sidenav-right md-whiteframe-4dp">
-            <md-toolbar class="md-theme-light">
-              <h1 class="md-toolbar-tools">Sidenav Right</h1>
-            </md-toolbar>
-            <md-content>
-              <md-button class="md-primary">
-                Close Sidenav Right
-              </md-button>
-            </md-content>
-          </md-sidenav>
-
           <md-list>
             <md-list-item ng-repeat="product in products.products" ng-click="null">
               <figure class="figure-image-overflow">
                 <img ng-src="uploads/products/{{product.sku}}.jpg" class="md-image" alt="{{ product.title }}">
               </figure>
               <div class="h3-tt-l">
-                <h3>{{ product.title }} {{ product.description }}</h3>
+                <h3>{{ product.title }} - {{ product.description }}</h3>
                 <!-- <h4>{{ product.availableSizes[0] }} | {{ product.style }}</h4> -->
                 <hr class="y-line" />
                 <p class="product-price">{{ product.price | currency : product.currencyFormat }}</p>
