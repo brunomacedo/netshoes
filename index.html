@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Netshoes by Bruno Macedo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Netshoes</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="//static5.netshoes.net/1412.1.1/assets/img/favicon/favicon.ico"/>
+	<link rel="icon" sizes="16x16 32x32" href="//static5.netshoes.net/1412.1.1/assets/img/favicon/favicon.ico"/>
+	
+	<!-- NETSHOES STYLE GUIDE -->
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css" />
+	<link rel="stylesheet" href="assets/css/structure.css"/>
+	<link rel="stylesheet" href="assets/css/home.css"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+
+    <!--[if IE]>
+		<link rel="stylesheet" href="//static5.netshoes.net/1412.1.1/assets/css-min/theme-common/ie-fix.css" type="text/css" media="all"/>
+	<![endif]--> 
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-aria/angular-aria.min.js"></script>
+	<script src="node_modules/angular-material/angular-material.min.js"></script>
+
+	<!-- MY SCRIPTS -->
+	<script src="app/app.js"></script>
+  <script src="app/controllers/mainController.js"></script>
+
+  </head>
+  <body>
+      <div class="ng-overflow-nt" ng-controller="MyController">
+        <section class="main-guide">
+
+          <md-sidenav class="md-sidenav-right md-whiteframe-4dp">
+            <md-toolbar class="md-theme-light">
+              <h1 class="md-toolbar-tools">Sidenav Right</h1>
+            </md-toolbar>
+            <md-content>
+              <md-button class="md-primary">
+                Close Sidenav Right
+              </md-button>
+            </md-content>
+          </md-sidenav>
+
+          <md-list>
+            <md-list-item ng-repeat="product in products.products" ng-click="null">
+              <figure class="figure-image-overflow">
+                <img ng-src="uploads/products/{{product.sku}}.jpg" class="md-image" alt="{{ product.title }}">
+              </figure>
+              <div class="h3-tt-l">
+                <h3>{{ product.title }} {{ product.description }}</h3>
+                <!-- <h4>{{ product.availableSizes[0] }} | {{ product.style }}</h4> -->
+                <hr class="y-line" />
+                <p class="product-price">{{ product.price | currency : product.currencyFormat }}</p>
+                <p class="product-installments">ou {{ product.installments }}x {{ product.price / product.installments | currency : product.currencyFormat}}</p>
+              </div>
+            </md-list-item>
+          </md-list>
+
+        </section>
+    </div>
+  </body>
+</html>
