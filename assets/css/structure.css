@@ -5,6 +5,7 @@ a, article, aside, audio, b, blockquote, body, br, button, canvas, cite, code, d
     outline: none;
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
+    font-style: normal;
     font-size: 14px;
     color: #000000;
     line-height: 1.4;
