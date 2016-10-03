@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Netshoes by Bruno Macedo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Netshoes</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="//static5.netshoes.net/1412.1.1/assets/img/favicon/favicon.ico"/>
+    <link rel="icon" sizes="16x16 32x32" href="//static5.netshoes.net/1412.1.1/assets/img/favicon/favicon.ico"/>
+
+    <!-- NETSHOES STYLE GUIDE -->
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="public/css/structure.css"/>
+    <link rel="stylesheet" href="public/css/home.css"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+
+    <!--[if IE]>
+    <link rel="stylesheet" href="//static5.netshoes.net/1412.1.1/assets/css-min/theme-common/ie-fix.css" type="text/css" media="all"/>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="ng-overflow-nt" ng-controller="MyController">
+
+      <section class="main-guide btn-add-cart">
+        <md-list>
+          <md-list-item ng-repeat="product in products" id="product{{product.id}}" ng-click="addCart(product)">
+            <figure class="figure-image-overflow">
+              <img ng-src="uploads/products/{{product.sku}}.jpg" class="md-image" alt="{{ product.title }}">
+            </figure>
+            <div class="h1-tt-products">
+              <h1>{{ product.title }} {{ product.description != 0 ? ' - ' : '' }}  {{ product.description }}</h1>
+              <hr class="y-line" />
+              <p class="product-price">{{ product.price | currency : product.currencyFormat + ' ' }}</p>
+              <p class="product-installments">ou {{ product.installments }}x {{ product.price / product.installments | currency : product.currencyFormat + ' ' }}</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </section>
+
+      <aside class="aside-cart">
+        <section class="wrapper">
+
+          <div class="div-tt-cart">
+            <h2 class="h2-tt-cart">
+              <div class="bounce-cart-count">
+                <md-icon md-svg-icon="images/icon_cart.svg"></md-icon>
+                <i>{{count}}</i>              
+              </div>
+              <span>Sacola</span>
+            </h2>
+          </div>
+
+          <ul class="ul-cart-pp">
+            <li ng-repeat="cart in cartProducts" class="li-cart">
+              <div class="cart-flex">
+                <figure class="cart-image">
+                  <img ng-src="uploads/products/{{cart.sku}}.jpg" alt="{{ cart.title }}">
+                </figure>
+                <div class="cart-description">
+                  <h3>{{ cart.title }}</h3>
+                  <p>{{ cart.availableSizes[0] }} | {{ cart.style }}</p>
+                  <p>Quantidade: {{ 1 }}</p>
+                </div>
+                <div class="cart-last-row">
+                  <md-button class="md-icon-button md-primary btn-close-cart" aria-label="icon_close">
+                    <md-icon md-svg-icon="images/icon_close.svg"></md-icon>
+                  </md-button>
+                  <p class="cart-price">{{ cart.price | currency : cart.currencyFormat + ' ' }}</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="cart-subtotal">
+              <div><span>Subtotal</span></div>
+              <div class="cart-total-price">
+                <span class="price">{{ 300 + 300 | currency : 'R$ ' }}</span>
+                <span>ou em até 10 x {{ 30 | currency : 'R$ ' }}</span>
+              </div>
+            </li>
+          </ul>
+
+        </section>
+      </aside>          
+
+    </div>
+
+    <!-- NODE MODULES -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+
+    <!-- MY SCRIPTS -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/mainController.js"></script>
+  </body>
+</html>
