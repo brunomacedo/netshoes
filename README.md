@@ -4,7 +4,7 @@
 * See a list of products;
 * See the products added to the cart.
 
-#Install Dependences
+##Install Dependences
 `$ npm install`
 
 ## Data
