@@ -1,6 +1,6 @@
 {
   "name": "netshoes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Netshoes Cart Test",
   "main": "app.js",
   "scripts": {
@@ -16,12 +16,10 @@
     "url": "https://github.com/brunomacedo/netshoes/issues"
   },
   "homepage": "https://github.com/brunomacedo/netshoes#readme",
-  "devDependencies": {
+  "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-aria": "^1.5.8",
-    "angular-material": "^1.1.1",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "angular-material": "^1.1.1"
   }
 }
