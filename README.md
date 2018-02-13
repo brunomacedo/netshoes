@@ -1,5 +1,5 @@
 # Netshoes Cart Test with Angular
-This is my first project in JS.
+This is my first project in AngularJS.
 
 ## Expected result
 
