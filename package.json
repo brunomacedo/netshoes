@@ -1,6 +1,6 @@
 {
   "name": "netshoes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Netshoes Cart Test",
   "main": "app.js",
   "scripts": {
