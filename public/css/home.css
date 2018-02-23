@@ -1,3 +1,15 @@
+/* GUIDE */
+section.main-guide {
+  width: 100%;
+  max-width: 730px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+section.wrapper {
+  padding: 4em 0;
+}
+
 /* FORMAT SCROLL */
 ::-webkit-scrollbar {
   width: 12px;
@@ -8,16 +20,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5); }
-
-/* GUIDE */
-section.main-guide {
-  width: 100%;
-  max-width: 730px;
-  margin: 0 auto;
-  padding-bottom: 50px; }
-
-section.wrapper {
-  padding: 4em 0; }
 
 /* DISPLAY PRODUCTS */
 .ng-overflow-nt {
