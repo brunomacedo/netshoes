@@ -1,9 +1,6 @@
 # Logs
 logs
 *.log
-yarn-debug.log*
-yarn-error.log*
-npm-debug.log*
 
 # Runtime data
 pids
@@ -31,6 +28,9 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
 
 # Dependency directories
 node_modules/
